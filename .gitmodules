@@ -1,0 +1,6 @@
+[submodule "vaca-api"]
+	path = vaca-api
+	url = https://github.com/mlseligson/vaca-api.git
+[submodule "vaca-frontend"]
+	path = vaca-frontend
+	url = https://github.com/mlseligson/vaca-frontend.git
