@@ -5,6 +5,8 @@ services:
     build:
       context: vaca-frontend
       target: prod
+    volumes:
+      - ./images:/app/public/images
     ports:
       - "80:8080"
       - "3001:3001"
@@ -12,6 +14,7 @@ services:
     build: ./vaca-api
     volumes:
       - ./secrets:/app/api/secrets
+      - ./images:/app/api/images
     ports:
       - "3000:3000"
     depends_on:
@@ -24,7 +27,7 @@ services:
     env_file:
       - .env
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - ./db_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     healthcheck:
@@ -32,6 +35,3 @@ services:
       interval: 10s
       timeout: 3s
       retries: 3
-
-volumes:
-  db_data:

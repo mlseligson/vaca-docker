@@ -1,9 +1,4 @@
---
--- PostgreSQL database dump
---
-
--- Dumped from database version 16.6 (Postgres.app)
--- Dumped by pg_dump version 16.6 (Postgres.app)
+\connect vacation
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -399,5 +394,9 @@ ALTER TABLE ONLY public.trips
 
 --
 -- PostgreSQL database dump complete
+--
+
+--
+-- PostgreSQL database cluster dump complete
 --
 
