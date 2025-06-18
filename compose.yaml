@@ -6,7 +6,7 @@ services:
       context: vaca-frontend
       target: prod
     volumes:
-      - ./images:/app/public/images
+      - ./images:/app/images
     ports:
       - "80:8080"
       - "3001:3001"
